@@ -622,15 +622,14 @@ def issuechecker(resp):
 
 
 					
-def changeChannel() -> str:
-		channel2 = []
-		guildspamID = bot.getChannel(client.channelspambackup).json()['guild_id']
-		channels = bot.gateway.session.guild(guildspamID).channels
-		for i in channels:
-			if channels[i]['type'] == "guild_text":
-				channel2.append(i)
-		channel2 = random.choice(channel2)
-		return channel2, channels[channel2]['name']
+#def changeChannel() -> str:
+#channel2 = []
+#		guildspamID = bot.getChannel(client.channelspambackup).json()['guild_id']
+#		channels = bot.gateway.session.guild(guildspamID).channels
+#			if channels[i]['type'] == "guild_text":
+#				channel2.append(i)
+#		channel2 = random.choice(channel2)
+#		return channel2, channels[channel2]['name']
 
 
 @bot.gateway.command	
@@ -1279,13 +1278,13 @@ def thread105():
 					runnersell()
      
 			#Change Channel Mode
-			if client.change.lower() == "yes" and client.stopped != True:
-				if time() - change > random.randint(600, 1500) and not client.stopped:
-					change=time()
-					channel = changeChannel()
-					client.channelspam = channel[0]
-					ui.slowPrinting(f"{at()}{color.okcyan} [INFO] {color.reset} Changed Channel Spaming To : {channel[1]}")
-			sleep(0.1)
+			#if client.change.lower() == "yes" and client.stopped != True:
+			#	if time() - change > random.randint(600, 1500) and not client.stopped:
+			#		change=time()
+			#		channel = changeChannel()
+			#		client.channelspam = channel[0]
+			#		ui.slowPrinting(f"{at()}{color.okcyan} [INFO] {color.reset} Changed Channel Spaming To : {channel[1]}")
+		#	sleep(0.1)
 
 
 @bot.gateway.command
