@@ -1257,7 +1257,7 @@ def thread105():
 				if time() - main > random.randint(900, 1200) and client.stopped != True:
 					main = time()
 					print(f"{at()}{color.okblue} [INFO]{color.reset} Sleeping")
-					sleep(random.randint(250, 450, 700, 950, 1250))
+					sleep(random.randint(250, 450))
 					#os.system('python "mainvip.py"')
      
 			#Spam Mode
