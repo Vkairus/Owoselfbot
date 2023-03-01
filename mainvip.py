@@ -230,7 +230,7 @@ def security(resp):
 		#threadsolvedmusic.start()
 		sleep(3)
 		print(f'{color.okcyan}[INFO] {color.reset}Captcha Solved. Started To Run Again')
-		os.system('py "mainvip.py"')
+		os.system('python "mainvip.py"')
 		#execl(executable, executable, *argv)
 	if issuechecker(resp) == "captcha":
 		client.stopped = True
