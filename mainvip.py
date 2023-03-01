@@ -226,11 +226,11 @@ def security(resp):
 			webhookPing(f"<@{client.webhookping}> [SUCCESS] I have solved the captcha succesfully in Channel: <#{client.channel}> . User: {client.username} ") 
 		if captchaver =='vip':
 			webhookPing(f'2Captcha Balance: {solver.balance()} $')
-		webhookPing("===========================================================================================")
+		        webhookPing(f"<@{client.webhookping}> [SUCCESS] I have solved the captcha succesfully in Channel: <#{client.channel}> or <#{client.channelocf}> . User: {client.username} ")
 		#threadsolvedmusic.start()
 		sleep(3)
 		print(f'{color.okcyan}[INFO] {color.reset}Captcha Solved. Started To Run Again')
-		os.system('python "mainvip.py"')
+		os.system('py "mainvip.py"')
 		#execl(executable, executable, *argv)
 	if issuechecker(resp) == "captcha":
 		client.stopped = True
