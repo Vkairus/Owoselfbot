@@ -578,7 +578,7 @@ def issuechecker(resp):
 					client.stopped =True
 					ui.slowPrinting(f'{at()}{color.fail} !!! [BANNED] !!! {color.reset} Your Account Have Been Banned From OwO Bot Please Open An Issue On The Support Discord server')
 					return "captcha"
-				if client.username in m['content'] and any(captcha in m['content'].lower() for captcha in ['(1/5)', '(2/5)', '(3/5)', '(4/5)','(5/5)']) and not client.stopped:
+				if client.username in m['content'] and any(captcha in m['content'].lower() for captcha in ['(1/5)', '(2/5)', '(3/5)', '(4/5)','(5/5)','⚠','verify','a human','DM','ask']) and not client.stopped:
 					msgs = bot.getMessages(dmsid)
 					msgs = msgs.json()
 					if type(msgs) is dict:
