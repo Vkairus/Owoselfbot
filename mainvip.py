@@ -8,7 +8,7 @@ import os
 from os import execl, name, system
 from sys import executable, argv
 from time import sleep, strftime, localtime, time
-#from solvecaptchalink import solvecaptchalink
+from solvecaptchalink import solvecaptchalink
 import atexit
 import random
 
