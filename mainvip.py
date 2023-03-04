@@ -8,7 +8,7 @@ import os
 from os import execl, name, system
 from sys import executable, argv
 from time import sleep, strftime, localtime, time
-from solvecaptchalink import solvecaptchalink
+#from solvecaptchalink import solvecaptchalink
 import atexit
 import random
 
@@ -591,7 +591,7 @@ def issuechecker(resp):
 							return solve(msgs[0]['attachments'][0]['url'], msgs[0]['content'])
 						client.stopped =True
 						return "captcha"
-					elif msgs[0]['author']['id'] == client.OwOID and 'link' in msgs[0]['content'].lower() and not client.stopped:
+					elif client.username in m['content'] and msgs[0]['author']['id'] == client.OwOID and 'link' in msgs[0]['content'].lower() and not client.stopped:
 						client.stopped =True
 						webhookPing(f"<@{client.webhookping}> [WARNIG] CAPTCHA LINK. User: {client.username} <@{client.userid}>")						
 						threadcaptcha.start()			
